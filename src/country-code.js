@@ -1,4 +1,4 @@
-export const CurrencyCode = new Map([
+export const CurrencyCode = [
   ["AED", "Emirati Dirham"],
   ["AFN", "Afghan Afghani"],
   ["ALL", "Albanian Lek"],
@@ -160,4 +160,4 @@ export const CurrencyCode = new Map([
   ["ZAR", "South African Rand"],
   ["ZMW", "Zambian Kwacha"],
   ["ZWL", "Zimbabwean Dollar"],
-]);
+];

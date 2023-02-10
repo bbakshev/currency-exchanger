@@ -25,12 +25,22 @@ function printError(error) {
   document.getElementById('exchanged-rate').innerHTML = error;
 }
 
-function populateCurrencySelect() {
+function populateCurrencySelectFrom() {
   const selectElement = document.getElementById('currency-from');
   CurrencyCode.forEach(function(code){
     const optionElement = document.createElement("option");
-    optionElement.value = code[1];
-    optionElement.textContent = code[1];
+    optionElement.value = code[0];
+    optionElement.textContent = `${code[0]} - ${code[1]}`;
+    selectElement.appendChild(optionElement);
+  });
+}
+
+function populateCurrencySelectTo() {
+  const selectElement = document.getElementById('currency-to');
+  CurrencyCode.forEach(function(code){
+    const optionElement = document.createElement("option");
+    optionElement.value = code[0];
+    optionElement.textContent = `${code[0]} - ${code[1]}`;
     selectElement.appendChild(optionElement);
   });
 }
@@ -44,6 +54,7 @@ function handleFormSubmission(event) {
 }
 
 window.addEventListener("load", function(){
-  populateCurrencySelect();
+  populateCurrencySelectFrom();
+  populateCurrencySelectTo();
   document.querySelector('form').addEventListener("submit", handleFormSubmission);
 });
