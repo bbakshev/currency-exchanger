@@ -3,13 +3,14 @@ import ExchangeRate from './exchange-rate.js';
 import {CurrencyCode} from './country-code.js';
 
 // Business Logic
-function getExchangeRate(enterAmount, exchangedAmount) {
+function getExchangeRate(enterAmount, exchangeRateFrom, exchangeRateTo) {
   ExchangeRate.getExchangeRate()
     .then(function(response) {
       if (response.result === "success") {
-        const exchangeRate = response.conversion_rates[exchangedAmount];
-        const convertedAmount = enterAmount * exchangeRate;
-        printExchange(enterAmount, convertedAmount, exchangedAmount);
+        const rateFrom = response.conversion_rates[exchangeRateFrom];
+        const rateTo = response.conversion_rates[exchangeRateTo];
+        const convertedAmount = enterAmount * (rateTo/rateFrom);
+        printExchange(enterAmount, convertedAmount, exchangeRateTo, exchangeRateFrom);
       } else {
         printError(response);
       }
@@ -17,8 +18,8 @@ function getExchangeRate(enterAmount, exchangedAmount) {
 }
 
 // UI Logic
-function printExchange(enterAmount, exchangedAmount, convertedSymbol) {
-  document.getElementById('exchanged-rate').innerHTML = `${enterAmount} USD is equivalent to ${exchangedAmount} ${convertedSymbol}.`;
+function printExchange(enterAmount, convertedAmount, exchangeRateTo, exchangeRateFrom) {
+  document.getElementById('exchanged-rate').innerHTML = `${enterAmount} ${exchangeRateFrom} is equivalent to ${convertedAmount} ${exchangeRateTo}`;
 }
 
 function printError(error) {
@@ -48,8 +49,9 @@ function populateCurrencySelectTo() {
 function handleFormSubmission(event) {
   event.preventDefault();
   const currentAmount = document.getElementById('amount').value;
+  const exchangeFrom = document.getElementById('currency-from').value.toUpperCase();
   const exchangedAmount = document.getElementById('currency-to').value.toUpperCase();
-  getExchangeRate(currentAmount, exchangedAmount);
+  getExchangeRate(currentAmount, exchangeFrom, exchangedAmount);
 
 }
 

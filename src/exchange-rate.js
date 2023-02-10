@@ -1,6 +1,7 @@
 export default class ExchangeRate {  
   static getExchangeRate() {
-    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
+    const exchangeFrom = document.getElementById('currency-from').value.toUpperCase();
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${exchangeFrom}`)
       .then(function(response) {
         if (!response.ok) {
           const errorMessage = `${response.status} ${response.statusText}`;
