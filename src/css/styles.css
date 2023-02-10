@@ -1,3 +1,68 @@
-body {
-  background-color: lightblue;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+label {
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #007bff;
+}
+
+input[type="number"] {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.drop-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.select-box {
+  width: 200px;
+}
+
+.form-select {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#exchanged-rate {
+  margin-top: 20px;
+  font-size: 20px;
 }

@@ -1,3 +1,5 @@
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeRate from './exchange-rate.js';
 import {CurrencyCode} from './country-code.js';
