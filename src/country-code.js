@@ -147,6 +147,7 @@ export const CurrencyCode = [
   ["UGX", "Ugandan Shilling"],
   ["UYU", "Uruguayan Peso"],
   ["UZS", "Uzbekistani Rupee"],
+  ["USD", "US Dollars"],
   ["VES", "Venezuelan Bolívar Soberano"],
   ["VND", "Vietnamese Dong"],
   ["VUV", "Vanuatu Vatu"],

@@ -11,8 +11,12 @@ function getExchangeRate(enterAmount, exchangeRateFrom, exchangeRateTo) {
       if (response.result === "success") {
         const rateFrom = response.conversion_rates[exchangeRateFrom];
         const rateTo = response.conversion_rates[exchangeRateTo];
-        const convertedAmount = enterAmount * (rateTo/rateFrom);
-        printExchange(enterAmount, convertedAmount, exchangeRateTo, exchangeRateFrom);
+        if (typeof rateFrom === 'undefined' || typeof rateTo === 'undefined') {
+          printError(`Sorry, the currency code ${exchangeRateFrom} or ${exchangeRateTo} is not supported by the API.`);
+        } else {
+          const convertedAmount = enterAmount * (rateTo/rateFrom);
+          printExchange(enterAmount, convertedAmount, exchangeRateTo, exchangeRateFrom);
+        }
       } else {
         printError(response);
       }
