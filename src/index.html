@@ -6,27 +6,25 @@
 <body>
   <h1>Currency Converter</h1>
   <form>
-    <label for="current-amt">Enter Amount:</label>
-    <input type="text" value="1"><br>
+    <label for="enter-amt">Enter Amount:</label>
+    <input type="number" id= "amount" value="1"><br>
     <label>From</label>
-    <select name="cars" id="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="opel">Opel</option>
-      <option value="audi">Audi</option>
+    <select class="form-select"  name="currency-from" id="currency-from">
+      <option selected value="USD">USD - United States</option>
+      <option value="AED"> AED - Emirati Dirham</option>
+      <option value="CAD">CAD - Canadian Dollar</option>
     </select><br>
     <label>To</label>
-    <select name="cars" id="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="opel">Opel</option>
-      <option value="audi">Audi</option>
+    <select class="form-select" name="currency-to" id="currency-to">
+      <option value="CUP">CUP - Cuban Peso</option>
+      <option value="INR">INR - Indian Rupee</option>
+      <option value="NZD">NZD - New Zealand Dollar</option>
     </select>
     <br><br>
     <input type="submit" value="Submit">
   </form>
-  <div class="exchanged-rate">
-    
+  <div id="exchanged-rate">
+
   </div>
 </body>
 </html>
