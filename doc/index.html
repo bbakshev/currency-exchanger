@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Currency Converter</h1>
+      <form>
+        <p>Enter Amount:</p>
+        <input type="number" id="amount" value="1" /><br/>
+        <div class="drop-list">
+        <label>From:</label>
+        <div class="select-box">
+        <select class="form-select" name="currency-from" id="currency-from">
+          <option selected value="USD">USD - United States</option></select><br/>
+        </div>
+        <label>To:</label>
+        <div class="select-box">
+        <select class="form-select" name="currency-to"id="currency-to"></select><br/><br/>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Get Exchange Rate</button><br>
+    <div id="exchanged-rate"></div>
+      </form>
+    </div>
+  <script src="bundle.js"></script></body>
+</html>
