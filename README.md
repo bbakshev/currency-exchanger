@@ -4,7 +4,10 @@
 
 ## Description
 
-A simple JavaScript and Google Translator form for a user to input a phrase and receive a translation of the phrase from any language to the user's specified language.  
+A simple JavaScript and Google Translator form for a user to input a phrase and receive a translation of the phrase from any language to the user's specified language. 
+
+[final screen](/src/assets/images/ui.png)
+
 ## Technologies Used
 
 * HTML
