@@ -4,7 +4,7 @@
 
 ## Description
 
-A simple JavaScript and Google Translator form for a user to input a phrase and receive a translation of the phrase from any language to the user's specified language. 
+A simple JavaScript program that uses Exchnage Rate API to convert base currency to a desired currency. The user will have options to choose from a base currency and the desired currency for an exchange rate. 
 
 ![final screen](/src/assets/images/ui.png)
 
